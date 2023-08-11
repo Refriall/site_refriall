@@ -20,7 +20,7 @@
   <!-- css link -->
   <link rel="stylesheet" href="styles.css" />
 
-  <title>EletroNiCs</title>
+  <title>Refriall</title>
 </head>
 
 <body>
@@ -38,7 +38,7 @@
 
           <div class="nav__logo">
             <a href="/" class="scroll-link">
-              EletroNiCs
+              <h1> Refriall </h1>
             </a>
           </div>
 
@@ -59,33 +59,12 @@
                 <a href="#category" class="nav__link scroll-link">Categorias</a>
               </li>
               <li class="nav__item">
-                <a href="#news" class="nav__link scroll-link">Blog</a>
+                <a href="#news" class="nav__link scroll-link">Grupo do Whatsapp</a>
               </li>
               <li class="nav__item">
                 <a href="#contact" class="nav__link scroll-link">Contato</a>
               </li>
             </ul>
-          </div>
-
-          <div class="nav__icons">
-            <a href="product.html" class="icon__item">
-              <svg class="icon__user">
-                <use xlink:href="./images/sprite.svg#icon-user"></use>
-              </svg>
-            </a>
-
-            <a href="#" class="icon__item">
-              <svg class="icon__search">
-                <use xlink:href="./images/sprite.svg#icon-search"></use>
-              </svg>
-            </a>
-
-            <a href="#" class="icon__item">
-              <svg class="icon__cart">
-                <use xlink:href="./images/sprite.svg#icon-shopping-basket"></use>
-              </svg>
-              <span id="cart__total">0</span>
-            </a>
           </div>
         </nav>
       </div>
@@ -99,14 +78,13 @@
             <li class="glide__slide">
               <div class="hero__center">
                 <div class="hero__left">
-                  <span class="">O melhor dos melhores em 2020</span>
-                  <h1 class="">TECNOLOGIA DE PONTA!</h1>
+                  <span class="">O melhor preço de 2023</span>
+                  <h1 class="">GÁS R22!</h1>
                   <p>Para todos os amantes de tecnologia de ponta!</p>
-                  <a href="#"><button class="hero__btn">COMPRAR AGORA</button></a>
                 </div>
                 <div class="hero__right">
                   <div class="hero__img-container">
-                    <img class="banner_01" src="./images/banner_01.png" alt="banner2" />
+                    <img class="r22" src="./images/products/Gas/r22.png" alt="banner2" />
                   </div>
                 </div>
               </div>
@@ -114,13 +92,36 @@
             <li class="glide__slide">
               <div class="hero__center">
                 <div class="hero__left">
-                  <span>O melhor dos melhores em 2020</span>
-                  <h1>TECNOLOGIA DE PONTA!</h1>
+                  <span class="">O melhor preço de 2023</span>
+                  <h1>GÁS R134a!</h1>
                   <p>Para todos os amantes de tecnologia de ponta!</p>
-                  <a href="#"><button class="hero__btn">COMPRAR AGORA</button></a>
                 </div>
                 <div class="hero__right">
-                  <img class="banner_02" src="./images/banner_02.png" alt="banner2" />
+                  <img class="r22" src="./images/products/Gas/r134a.png" alt="banner2" />
+                </div>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="hero__center">
+                <div class="hero__left">
+                  <span class="">O melhor preço de 2023</span>
+                  <h1>GÁS R404!</h1>
+                  <p>Para todos os amantes de tecnologia de ponta!</p>
+                </div>
+                <div class="hero__right">
+                  <img class="r22" src="./images/products/Gas/r404a.png" alt="banner2" />
+                </div>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="hero__center">
+                <div class="hero__left">
+                  <span class="">O melhor preço de 2023</span>
+                  <h1>GÁS R410a!</h1>
+                  <p>Para todos os amantes de tecnologia de ponta!</p>
+                </div>
+                <div class="hero__right">
+                  <img class="r22" src="./images/products/Gas/r410a.png" alt="banner2" />
                 </div>
               </div>
             </li>
@@ -129,6 +130,8 @@
         <div class="glide__bullets" data-glide-el="controls[nav]">
           <button class="glide__bullet" data-glide-dir="=0"></button>
           <button class="glide__bullet" data-glide-dir="=1"></button>
+          <button class="glide__bullet" data-glide-dir="=2"></button>
+          <button class="glide__bullet" data-glide-dir="=3"></button>
         </div>
 
         <div class="glide__arrows" data-glide-el="controls">
@@ -615,10 +618,9 @@
                         </a>
                       </li>
                       <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                        </svg>
                         </a>
                       </li>
                     </ul>
@@ -651,7 +653,6 @@
                       <div class="product__price">
                         <h4>$5500</h4>
                       </div>
-                      <a href="#"><button type="submit" class="product__btn">Add to cart</button></a>
                     </div>
                     <ul>
                       <li>
@@ -700,32 +701,59 @@
       <section class="category__section section" id="category">
         <div class="tab__list">
           <div class="title__container tabs">
+            <!-- Todos -->
             <div class="section__titles category__titles ">
               <div class="section__title filter-btn active" data-id="All Products">
                 <span class="dot"></span>
                 <h1 class="primary__title">Todos os produtos</h1>
               </div>
             </div>
-            <div class="section__titles">
-              <div class="section__title filter-btn" data-id="Trending Products">
-                <span class="dot"></span>
-                <h1 class="primary__title">Mais procurados</h1>
-              </div>
-            </div>
+            <!-- Todos -->
 
+            <!-- Ar Condicionado -->
             <div class="section__titles">
-              <div class="section__title filter-btn" data-id="Special Products">
+              <div class="section__title filter-btn" data-id="Ar Condicionado">
                 <span class="dot"></span>
-                <h1 class="primary__title">Oferta especial</h1>
+                <h1 class="primary__title">Ar Condicionado</h1>
               </div>
             </div>
+            <!-- Ar Condicionado -->
 
+            <!-- Geladeira -->
             <div class="section__titles">
-              <div class="section__title filter-btn" data-id="Featured Products">
+              <div class="section__title filter-btn" data-id="Geladeira">
                 <span class="dot"></span>
-                <h1 class="primary__title">Novos produtos</h1>
+                <h1 class="primary__title">Geladeira</h1>
               </div>
             </div>
+            <!-- Geladeira -->
+
+            <!-- Máquinas -->
+            <div class="section__titles">
+              <div class="section__title filter-btn" data-id="Maquinas de lavar">
+                <span class="dot"></span>
+                <h1 class="primary__title">Máquinas de lavar</h1>
+              </div>
+            </div>
+            <!-- Máquinas -->
+
+            <!-- Ferramentas -->
+            <div class="section__titles">
+              <div class="section__title filter-btn" data-id="Ferramentas">
+                <span class="dot"></span>
+                <h1 class="primary__title">Ferramentas</h1>
+              </div>
+            </div>
+            <!-- Ferramentas -->
+
+            <!-- Eletrônicos -->
+            <div class="section__titles">
+              <div class="section__title filter-btn" data-id="Eletronicos">
+                <span class="dot"></span>
+                <h1 class="primary__title">Eletrônicos</h1>
+              </div>
+            </div>
+            <!-- Eletrônicos -->
 
           </div>
         </div>
@@ -790,12 +818,14 @@
                   <div class="client__image">
                     <img src="./images/profile1.jpg" alt="profile">
                   </div>
-                  <p>Se você possui um iPhone 6, 7 ou 8, e não vê a hora de entrar na era da tela ampla com notch, 
+                  <p>Se você possui um iPhone 6, 7 ou 8, e não vê a hora de entrar na era da tela ampla com notch,
                     <br>
-                     o iPhone 11 de 128 GB é sem dúvida uma ótima opção.
-                    Por aproximadamente R$ 4.200, <br> 
-                    você leva para casa um aparelho que ainda é muito competente em termos de câmera e processamento, <br>
-                     com uma bateria excelente, e claro, atualizações garantidas..</p>
+                    o iPhone 11 de 128 GB é sem dúvida uma ótima opção.
+                    Por aproximadamente R$ 4.200, <br>
+                    você leva para casa um aparelho que ainda é muito competente em termos de câmera e processamento,
+                    <br>
+                    com uma bateria excelente, e claro, atualizações garantidas..
+                  </p>
                   <div class="client__info">
                     <h3>Jailson Senna</h3>
                     <span>Critico da Tecmundo</span>
@@ -807,8 +837,8 @@
                   <div class="client__image">
                     <img src="./images/profile2.jpg" alt="profile">
                   </div>
-                  <p>O iPhone 12 com a mesma capacidade vai te oferecer um design renovado, 
-                    tela melhor e com menos bordas, mais processamento e câmeras melhores, porém, 
+                  <p>O iPhone 12 com a mesma capacidade vai te oferecer um design renovado,
+                    tela melhor e com menos bordas, mais processamento e câmeras melhores, porém,
                     a diferença de preço é bem salgada: ele custará praticamente O DOBRO da geração anterior..</p>
                   <div class="client__info">
                     <h3>Erica Martins</h3>
@@ -821,15 +851,16 @@
                   <div class="client__image">
                     <img src="./images/profile3.jpg" alt="profile">
                   </div>
-                  <p>Numa comparação direta com o Galaxy S20 Plus, por exemplo, 
-                    o iPhone 11 perde no tamanho e na qualidade da tela – já que o painel do S20+ é um Super AMOLED Quad HD, 
-                    enquanto o do iPhone 11 é apenas IPS HD –, e também fica para trás na quantidade de câmeras, 
+                  <p>Numa comparação direta com o Galaxy S20 Plus, por exemplo,
+                    o iPhone 11 perde no tamanho e na qualidade da tela – já que o painel do S20+ é um Super AMOLED Quad
+                    HD,
+                    enquanto o do iPhone 11 é apenas IPS HD –, e também fica para trás na quantidade de câmeras,
                     já que não conta com uma lente zoom, presente no S20+.
 
-                    A bateria e a velocidade de carregamento do S20+ também são melhores, 
+                    A bateria e a velocidade de carregamento do S20+ também são melhores,
                     isso sem falar nos acessórios que acompanham o dispositivo.
-                    
-                    Como eu disse acima, os iPhones estão vindo sem carregador e fones de ouvido na caixa, 
+
+                    Como eu disse acima, os iPhones estão vindo sem carregador e fones de ouvido na caixa,
                     enquanto o S20+ traz um carregador de 25w, fones de ouvido AKG e uma capinha.</p>
                   <div class="client__info">
                     <h3>Gustava Sacomanii</h3>
@@ -844,19 +875,19 @@
                   <div class="client__image">
                     <img src="./images/profile4.jpg" alt="">
                   </div>
-                  <p>Apesar de ter sido lançado em 2019, o iPhone 11 conta com um processador de altíssimo nível, 
-                    melhor que muitos Androids topos de linha atuais. Para você ter ideia, 
+                  <p>Apesar de ter sido lançado em 2019, o iPhone 11 conta com um processador de altíssimo nível,
+                    melhor que muitos Androids topos de linha atuais. Para você ter ideia,
                     o aparelho faz mais pontos nos testes de benchmark que o Galaxy S20!
 
-                    Nas tarefas do dia a dia, como rolar redes sociais, alternar entre apps, 
-                    executar vídeos e fotografar, tudo roda de forma muito veloz e fluida, 
+                    Nas tarefas do dia a dia, como rolar redes sociais, alternar entre apps,
+                    executar vídeos e fotografar, tudo roda de forma muito veloz e fluida,
                     e provavelmente continuará assim por um bom tempo, mesmo após as atualizações do iOS.
-                    
+
                     Aliás, falando em atualizações, você que compra o iPhone 11 hoje, já garante os iOS 14 e 15,
-                     e até quem sabe o 16. Isso permite que o aparelho permaneça atualizado durante toda sua vida útil
-                      (levando em conta que você deve revendê-lo depois de 2 anos).
-                    
-                    Nos jogos o modelo também dá um show, rodando títulos como Genshin Impact com o “pé nas costas”, 
+                    e até quem sabe o 16. Isso permite que o aparelho permaneça atualizado durante toda sua vida útil
+                    (levando em conta que você deve revendê-lo depois de 2 anos).
+
+                    Nos jogos o modelo também dá um show, rodando títulos como Genshin Impact com o “pé nas costas”,
                     mesmo com gráficos no máximo..</p>
                   <div class="client__info">
                     <h3>Enzo Miguel</h3>
@@ -908,56 +939,56 @@
           <a href="#">Afiliações</a>
           <a href="#">Especiais</a>
           <a href="#">Mapa do site</a>
-      </div>
-      <div class="footer-top__box">
+        </div>
+        <div class="footer-top__box">
           <h3>INFORMAÇÃO</h3>
           <a href="#">Sobre nós</a>
           <a href="#">Politicas da loja</a>
           <a href="#">Termos e condições</a>
           <a href="#">Entre em contato</a>
           <a href="#">Mapa do site</a>
-      </div>
-      <div class="footer-top__box">
+        </div>
+        <div class="footer-top__box">
           <h3>MINHA CONTA</h3>
           <a href="#">Minha conta</a>
           <a href="#">Historico de compra</a>
           <a href="#">Lista de desejo</a>
           <a href="#">Novidades</a>
           <a href="#">Voltar ao inicio</a>
-      </div>
-      <div class="footer-top__box">
+        </div>
+        <div class="footer-top__box">
           <h3>FALE CONOSCO!</h3>
           <div>
-              <span>
-                  <svg>
-                      <use xlink:href="./images/sprite.svg#icon-location"></use>
-                  </svg>
-              </span>
-              Endereço: R. Gomes Barbosa, 870 - Centro, Viçosa - MG, 36570-101
+            <span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-location"></use>
+              </svg>
+            </span>
+            Endereço: R. Gomes Barbosa, 870 - Centro, Viçosa - MG, 36570-101
           </div>
           <div>
-              <span>
-                  <svg>
-                      <use xlink:href="./images/sprite.svg#icon-envelop"></use>
-                  </svg>
-              </span>
-              marcolopesdias@outlook.com
+            <span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-envelop"></use>
+              </svg>
+            </span>
+            marcolopesdias@outlook.com
           </div>
           <div>
-              <span>
-                  <svg>
-                      <use xlink:href="./images/sprite.svg#icon-phone"></use>
-                  </svg>
-              </span>
-             31984542217
+            <span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-phone"></use>
+              </svg>
+            </span>
+            31984542217
           </div>
           <div>
-              <span>
-                  <svg>
-                      <use xlink:href="./images/sprite.svg#icon-paperplane"></use>
-                  </svg>
-              </span>
-             Viçosa-MG, Brasil
+            <span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-paperplane"></use>
+              </svg>
+            </span>
+            Viçosa-MG, Brasil
           </div>
         </div>
       </div>
@@ -989,13 +1020,9 @@
       </div>
       <div class="popup__right">
         <div class="right__content">
-          <h1>Cupom de desconto <span>30%</span> Off</h1>
+          <h1>Cupom de desconto <span>5%</span> Off</h1>
           <p>Inscreva-se no site e ganhe um cupom de desconto em sua proxima compra!
           </p>
-          <form action="#">
-            <input type="email" placeholder="Digite seu email..." class="popup__form">
-            <a href="#">Inscreva-se</a>
-          </form>
         </div>
       </div>
     </div>
@@ -1011,7 +1038,7 @@
 
 
   <!-- Glide Carousel Script -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
   <!-- animação do scroll -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -1019,7 +1046,6 @@
   <script src="./js/products.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/slider.js"></script>
-
 </body>
 
 </html>

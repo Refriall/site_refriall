@@ -29,7 +29,7 @@ const displayProductItems = items => {
                       <img src=${product.image} alt="product">
                     </div>
                     <div class="product__footer">
-                      <h3>${product.title}</h3>
+                      <h1>${product.title}</h1>
                       <div class="rating">
                         <svg>
                           <use xlink:href="./images/sprite.svg#icon-star-full"></use>
@@ -44,33 +44,18 @@ const displayProductItems = items => {
                           <use xlink:href="./images/sprite.svg#icon-star-full"></use>
                         </svg>
                         <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
+                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
                         </svg>
                       </div>
                       <div class="product__price">
-                        <h4>$${product.price}</h4>
+                        <h4>Cód: ${product.cod}</h4>
                       </div>
-                      <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
                   <ul>
                       <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
+                        <a data-tip="Quick View" data-place="left" href="product.html?cod=${product.cod}">
                           <svg>
                             <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
                           </svg>
                         </a>
                       </li>
@@ -150,8 +135,8 @@ let picActive = 1;
     picContainer.addEventListener(event, e => {
       const target = e.target.closest("img");
       if (!target) return;
-      const id = target.id.slice(3);
-      changeImage(`./images/products/iPhone/iphone${id}.jpeg`, id);
+      const id = target.src.slice(33);
+      changeImage(`.${id}`, id);
     });
   }
 });
@@ -163,9 +148,9 @@ const changeImage = (imgSrc, n) => {
   // muda o background-image
   zoom.style.backgroundImage = `url(${imgSrc})`;
   //remove a borda da imagem lateral ativa (anterior)
-  picList[picActive - 1].classList.remove("img-active");
+  //picList[picActive - 1].classList.remove("img-active");
   // adiciona na imagem ativa
-  picList[n - 1].classList.add("img-active");
+  //picList[n - 1].classList.add("img-active");
   //   atualiza a imagem ao lado
   picActive = n;
 };

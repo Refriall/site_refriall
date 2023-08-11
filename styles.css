@@ -10,7 +10,8 @@ Reset cor
   --black3: #252525;
   --black4: #000;
   --black5: #212529;
-  --orange: #eb0028;
+  --red: #eb0028;
+  --orange: #ff5700;
   --white: #fff;
   --grey: #959595;
   --grey2: #666;
@@ -106,7 +107,8 @@ Navegação
 
 .nav__logo a {
   font-size: 2.5rem;
-  color: var(--black);
+  color: var(--orange);
+  text-shadow: 2px 2px 5px #000;
   padding: 1.6rem;
   font-weight: 700;
 }
@@ -239,6 +241,7 @@ Navegação
 navegação midia query
 ======================
 */
+
 @media only screen and (max-width: 768px) {
   .nav__menu {
     position: fixed;
@@ -319,6 +322,17 @@ navegação midia query
   }
 }
 
+@media only screen and (max-width: 564px) {
+  .nav__icons .icon__item svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .nav__icons .icon__item {
+    padding: 0.2rem;
+  }
+}
+
 @media only screen and (max-width: 568px) {
   .nav__icons .icon__item svg {
     width: 1.4rem;
@@ -352,6 +366,9 @@ Hero area
 
 .hero .glide__arrow {
   padding: 1.5rem 1.7rem;
+  margin: 30px;
+  margin-left: -210px;
+  margin-right: -220px;
   opacity: 0;
   border: none;
   background-color: var(--grey);
@@ -416,7 +433,7 @@ Hero area
   background-color: var(--black);
   color: var(--primaryColor);
   cursor: pointer;
-  margin-top: 1rem;
+  margin-top: 10rem;
   padding: 1.5rem 4rem;
   border: 1px solid var(--black);
   transition: all 0.3s ease-in-out;
@@ -600,6 +617,38 @@ Coleção midia query
 
   .collection__box:not(:last-child) {
     margin: 0 0 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 564px) {
+  .collection {
+    margin: 0;
+    position: relative;
+  }
+
+  .collection__container {
+    width: 100%;
+    height: 25rem;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .collection__box {
+    justify-content: space-around;
+    height: 7.5rem;
+  }
+
+  .collection__content {
+    flex: 0 0 30%;
+  }
+
+  .collection__data span {
+    font-size: 1.2rem;
+  }
+
+  .collection__data h1 {
+    font-size: 2rem;
   }
 }
 
@@ -1031,6 +1080,21 @@ ctaegoria (centro)
   }
 }
 
+@media only screen and (max-width: 564px) {
+  .category__center {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 1rem;
+  }
+
+  .category__products .product__header {
+    height: 10rem;
+  }
+
+  .category__products .product__header img {
+    object-fit: contain;
+  }
+}
+
 @media only screen and (max-width: 568px) {
   .category__center {
     grid-template-columns: 1fr 1fr;
@@ -1137,7 +1201,7 @@ Pop Up
 }
 
 .right__content h1 span {
-  color: var(--green);
+  color: var(--orange);
 }
 
 .right__content p {
@@ -1281,6 +1345,52 @@ vai para header
   }
 }
 
+@media only screen and (max-width: 564px) {
+  .popup__right {
+    padding: 0 1.6rem;
+  }
+
+  .popup__content {
+    height: 35rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .right__content {
+    width: 100%;
+  }
+
+  .right__content h1 {
+    font-size: 3rem;
+  }
+
+  .right__content p {
+    font-size: 1.4rem;
+  }
+
+  .popup__form {
+    width: 100%;
+    padding: 1.5rem 0;
+    margin-bottom: 1.3rem;
+  }
+
+  .right__content a:link,
+  .right__content a:visited {
+    padding: 1.5rem 3rem;
+  }
+
+  .popup__close {
+    top: 1rem;
+    right: 1rem;
+    padding: 1.3rem;
+  }
+
+  .popup__close svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}
+
 @media only screen and (max-width: 568px) {
   .popup__right {
     padding: 0 1.6rem;
@@ -1398,6 +1508,22 @@ midia query facilitado
   }
 }
 
+@media only screen and (max-width: 564px) {
+  .facility__contianer {
+    grid-template-columns: 1fr;
+  }
+
+  .facility-img__container {
+    width: 7rem;
+    height: 7rem;
+    line-height: 8.5rem;
+  }
+
+  .facility__contianer p {
+    font-size: 1.4rem;
+  }
+}
+
 @media only screen and (max-width: 568px) {
   .facility__contianer {
     grid-template-columns: 1fr;
@@ -1506,6 +1632,38 @@ criticosmidia query
 
   .client__image {
     margin-bottom: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 564px) {
+  .testimonial {
+    height: 100%;
+    padding: 4rem 0 5rem;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .testimonial__box {
+    height: 100%;
+  }
+
+  .testimonial__box p {
+    width: 100%;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .client__image {
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial__box span {
+    margin-bottom: 1rem;
+  }
+
+  .testimonial .glide__bullets {
+    bottom: -8%;
   }
 }
 
@@ -1697,6 +1855,27 @@ noticias midia query
     width: 45rem;
     display: block;
     margin-bottom: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 564px) {
+  .newsletter__email {
+    width: 23rem;
+    font-size: 1.2rem;
+  }
+
+  .newsletter__data h3 {
+    font-size: 1.6rem;
+  }
+
+  .newsletter__data p {
+    font-size: 1rem;
+  }
+
+  .newsletter__link:link,
+  .newsletter__link:visited {
+    padding: 1.2rem 2rem;
+    margin-left: 0;
   }
 }
 
@@ -2130,6 +2309,12 @@ detalhes dos produtos
   }
 }
 
+@media only screen and (max-width: 564px) {
+  .detail__content {
+    height: 110rem;
+  }
+}
+
 @media only screen and (max-width: 568px) {
   .detail__content {
     height: 110rem;
@@ -2210,6 +2395,21 @@ detalhes dosprodutos midia query
   .select .select-box {
     display: block;
     width: 20rem;
+  }
+}
+
+@media only screen and (max-width: 564px) {
+  .select .select-box {
+    width: 15rem;
+  }
+
+  .input-counter {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .input-counter div {
+    margin-top: 1rem;
   }
 }
 
