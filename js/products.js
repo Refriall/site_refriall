@@ -135,7 +135,7 @@ let picActive = 1;
     picContainer.addEventListener(event, e => {
       const target = e.target.closest("img");
       if (!target) return;
-      const id = target.src.slice(30);
+      const id = target.src.slice(28);
       console.log(id)
       changeImage(`${id}`, id);
     });
