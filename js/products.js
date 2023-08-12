@@ -123,10 +123,8 @@ const pic5 = document.getElementById("pic5");
 const picContainer = document.querySelector(".product__pictures");
 const zoom = document.getElementById("zoom");
 const pic = document.getElementById("pic");
-
 // lista de fotos
 const picList = [pic1, pic2, pic3, pic4, pic5];
-
 // foto ativa
 let picActive = 1;
 
@@ -136,15 +134,15 @@ let picActive = 1;
       const target = e.target.closest("img");
       if (!target) return;
 
-const imageUrl = target.src;
+      const imageUrl = target.src;
 
-const parts = imageUrl.split("/");
+      const parts = imageUrl.split("/");
 
-const imagePath = parts[parts.length - 2] + "/" + parts[parts.length - 1];
+      const imagePath = parts[parts.length - 2] + "/" + parts[parts.length - 1];
 
       const id = `images/products/${imagePath}`;
       changeImage(`${id}`, id);
-    });
+    });l
   }
 });
 
