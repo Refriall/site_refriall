@@ -136,7 +136,8 @@ let picActive = 1;
       const target = e.target.closest("img");
       if (!target) return;
       const id = target.src.slice(33);
-      changeImage(`.${id}`, id);
+      console.log(id)
+      changeImage(id, id);
     });
   }
 });
