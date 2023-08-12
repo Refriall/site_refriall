@@ -152,10 +152,6 @@ const changeImage = (imgSrc, n) => {
   pic.src = imgSrc;
   // muda o background-image
   zoom.style.backgroundImage = `url(${imgSrc})`;
-  //remove a borda da imagem lateral ativa (anterior)
-  //picList[picActive - 1].classList.remove("img-active");
-  // adiciona na imagem ativa
-  //picList[n - 1].classList.add("img-active");
   //   atualiza a imagem ao lado
   picActive = n;
 };
