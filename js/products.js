@@ -142,7 +142,7 @@ let picActive = 1;
 
       const id = `images/products/${imagePath}`;
       changeImage(`${id}`, id);
-    });l
+    });
   }
 });
 
