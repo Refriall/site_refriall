@@ -137,7 +137,7 @@ let picActive = 1;
       if (!target) return;
       const id = target.src.slice(33);
       console.log(id)
-      changeImage(id, id);
+      changeImage(`${id}`, id);
     });
   }
 });
