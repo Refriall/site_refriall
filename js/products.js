@@ -26,7 +26,7 @@ const displayProductItems = items => {
     product => ` 
                   <div class="product category__products">
                     <div class="product__header">
-                      <img src=${product.image} alt="product">
+                      <img src=${product.image.img1} alt="product">
                     </div>
                     <div class="product__footer">
                       <h1>${product.title}</h1>

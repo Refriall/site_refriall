@@ -15,28 +15,36 @@
         {
             "id": 1,
             "title": "Samsung Geladeira",
-            "image": "./images/products/sumsung/samsung2.jpeg",
+            "image": {
+              "img1": "./images/products/sumsung/samsung2.jpeg"
+            },
             "cod": "2",
             "category": "Geladeira"
         },
         {
             "id": 2,
             "title": "Samsung Máquinas de lavar",
-            "image": "./images/products/sumsung/samsung3.jpeg",
+            "image": {
+              "img1": "./images/products/sumsung/samsung3.jpeg"
+            },
             "cod": "3",
             "category": "Maquinas de lavar"
         },
         {
             "id": 3,
             "title": "Samsung Ferramentas",
-            "image": "./images/products/sumsung/samsung4.jpeg",
+            "image": {
+              "img1": "./images/products/sumsung/samsung4.jpeg"
+            },
             "cod": "52",
             "category": "Ferramentas"
         },
         {
             "id": 4,
             "title": "Sony Eletrônicos",
-            "image": "/images/products/sumsung/samsung5.jpeg",
+            "image": {
+              "img1": "/images/products/sumsung/samsung5.jpeg"
+            },
             "cod": "55",
             "category": "Eletronicos"
         }
