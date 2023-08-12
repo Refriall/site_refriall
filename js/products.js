@@ -136,15 +136,11 @@ let picActive = 1;
       const target = e.target.closest("img");
       if (!target) return;
 
-// URL da imagem
 const imageUrl = target.src;
 
-// Divide a URL usando "/" como separador
 const parts = imageUrl.split("/");
 
-// O caminho da imagem estará na penúltima parte
 const imagePath = parts[parts.length - 2] + "/" + parts[parts.length - 1];
-
 
       const id = `images/products/${imagePath}`;
       changeImage(`${id}`, id);
