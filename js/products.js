@@ -14,16 +14,14 @@ const getProducts = async () => {
 carrega categorias de produtos
 =============
  */
-const categoryCenter = document.querySelector(".category__center");
+document.addEventListener('DOMContentLoaded', async () => {
+  const categoryCenter = document.querySelector(".category__center");
+  const cartTotalElement = document.getElementById("cart__total");
+  let produtos = JSON.parse(localStorage.getItem("Produtos")) || [];
 
-window.addEventListener("DOMContentLoaded", async function () {
-  const products = await getProducts();
-  displayProductItems(products);
-});
-
-const displayProductItems = items => {
-  let displayProduct = items.map(
-    product => ` 
+  function displayProductItems(items) {
+    let displayProduct = items.map(
+      product => `
                   <div class="product category__products">
                     <div class="product__header">
                       <img src=${product.image.img1} alt="product">
@@ -60,16 +58,56 @@ const displayProductItems = items => {
                         </a>
                       </li>
                   </ul>
+                  <button type="button" class="product__btn">Add to cart</button>
                   </div>
-                  `
-  );
+      `
+    );
+  
+    displayProduct = displayProduct.join("");
+    if (categoryCenter) {
+      categoryCenter.innerHTML = displayProduct;
+    }
 
-  displayProduct = displayProduct.join("");
-  if (categoryCenter) {
-    categoryCenter.innerHTML = displayProduct;
+    const addToCartButtons = document.querySelectorAll(".product__btn");
+    addToCartButtons.forEach(button => {
+      button.addEventListener("click", function () {
+        const productTitle = button.parentElement.querySelector("h1").textContent;
+        const productCod = button.parentElement.querySelector(".product__price h4").textContent.split(" ")[1];
+
+        const foundIndex = produtos.findIndex(product => product.cod === productCod);
+        if (foundIndex !== -1) {
+          produtos[foundIndex].quantity = (parseInt(produtos[foundIndex].quantity) + 1).toString();
+        } else {
+          produtos.push({
+            title: productTitle,
+            cod: productCod,
+            quantity: "1"
+          });
+        }
+
+        updateLocalStorage(produtos);
+        updateCartTotal();
+      });
+    });
+
+    updateCartTotal();
   }
-};
+  
+  function updateLocalStorage(data) {
+    localStorage.setItem("Produtos", JSON.stringify(data));
+  }
 
+  function updateCartTotal() {
+    // Calcular a soma das quantidades de todos os produtos
+    const totalQuantity = produtos.reduce((sum, product) => sum + parseInt(product.quantity), 0);
+
+    // Atualizar o conteúdo do elemento com o total calculado
+    cartTotalElement.textContent = totalQuantity;
+  }
+
+  const products = await getProducts();
+  displayProductItems(products);
+});
 /*
 =============
 filtro
@@ -187,3 +225,4 @@ if (detail) {
     }
   });
 }
+

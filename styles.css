@@ -70,8 +70,9 @@ Header
 }
 
 .container {
-  max-width: 117rem;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px; /* Largura máxima para telas maiores */
+  margin: 0 auto; /* Centralizar o conteúdo */
   padding: 0 1.6rem;
 }
 
@@ -198,6 +199,12 @@ Navegação
   padding: 0.2rem 0.4rem;
   border-radius: 100%;
   color: var(--primaryColor);
+}
+
+.nav__icons #cart__total.expanded {
+  font-size: 1rem; /* Tamanho de fonte menor quando expandido */
+  padding: 0.2rem 0.4rem; /* Padding menor quando expandido */
+  right: -12px; /* Ajuste a posição para a esquerda quando expandido */
 }
 
 .page__title-area {
@@ -355,7 +362,7 @@ Hero area
   background-color: var(--primaryColor);
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
 }
 
 .hero .glide__bullet {
@@ -464,7 +471,7 @@ Hero area
 }
 
 .hero__right img.banner_03 {
-  width: 70%;
+  width: 50%;
 }
 
 /*
@@ -511,6 +518,90 @@ Hero midia query
   .hero__right {
     display: none;
   }
+}
+
+.banner {
+  margin: 3rem 0;
+}
+
+.banner__container {
+  width: 100%;
+  padding: 0 10rem;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner__box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  flex: 1;
+  height: 50rem;
+  background-color: var(--primaryColor);
+}
+
+.img__banner {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img__banner img {
+  max-width: 100%;
+  height: auto;
+}
+
+.banner__content {
+  flex: 1;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column; /* Adicione a direção de coluna */
+  align-items: center;
+  justify-content: center;
+}
+
+.banner__data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.banner__content span {
+  color: var(--black);
+  text-align: center; /* Centralizar o texto horizontalmente */
+}
+
+.banner__content h1 {
+  margin-top: 1rem;
+  text-align: center; /* Centralizar o texto horizontalmente */
+}
+
+.banner__content p {
+  margin: 0; /* Remove margens padrão */
+}
+
+.banner__content a:link,
+.banner__content a:visited {
+  font-weight: 700;
+  display: inline-block;
+  padding: 1rem 1.4rem;
+  margin-top: 1.3rem;
+  border-radius: 3rem;
+  border: 2px solid var(--secondaryColor);
+  color: var(--primaryColor);
+  background-color: var(--secondaryColor);
+  text-align: center; /* Centralizar o texto horizontalmente */
+  transition: all 0.3s ease-in-out;
+}
+
+.banner__content a:hover {
+  background-color: transparent;
+  color: var(--secondaryColor);
 }
 
 /*
